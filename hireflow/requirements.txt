@@ -1,0 +1,6 @@
+# Core runtime dependencies (enough to run main.py and the Streamlit app)
+semantic-kernel>=1.30
+openai>=1.40
+python-dotenv>=1.0
+streamlit>=1.40
+pandas>=2.0

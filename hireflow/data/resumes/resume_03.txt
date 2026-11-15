@@ -1,0 +1,5 @@
+Name: Aman Tiwari
+Skills: Python, JavaScript, Git
+Experience: 5 years
+Education: M.Tech Software Engineering
+Summary: Full-stack developer, mostly front-end work.
