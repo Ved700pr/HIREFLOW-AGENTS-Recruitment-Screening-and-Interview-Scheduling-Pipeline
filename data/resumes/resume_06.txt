@@ -1,4 +1,0 @@
-Name: Neha Gupta
-Experience: 4 years
-Education: B.Tech Computer Science
-Summary: I have worked with Python and databases on several projects. (No skills section in this resume.)
