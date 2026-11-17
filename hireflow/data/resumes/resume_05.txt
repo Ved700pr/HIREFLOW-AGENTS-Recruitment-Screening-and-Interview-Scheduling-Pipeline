@@ -1,5 +1,0 @@
-Name: Vikram Singh
-Skills: Java, Spring, SQL
-Experience: 2 years
-Education: B.E. Computer Engineering
-Summary: Java developer in a banking team.
