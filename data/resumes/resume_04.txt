@@ -1,0 +1,5 @@
+Name: Sneha Iyer
+Skills: Python, SQL, REST APIs, Git, FastAPI, AWS, Docker
+Experience: 6 years
+Education: MCA
+Summary: Led a team building cloud-hosted APIs.

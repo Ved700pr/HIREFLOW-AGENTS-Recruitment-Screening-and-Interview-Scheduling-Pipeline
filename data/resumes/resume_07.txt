@@ -1,0 +1,5 @@
+Name: Arjun Mehta
+Skills: Python, SQL, REST APIs, Git
+Experience: Fresher
+Education: B.Tech Computer Science
+Summary: Recent graduate with strong internship projects.

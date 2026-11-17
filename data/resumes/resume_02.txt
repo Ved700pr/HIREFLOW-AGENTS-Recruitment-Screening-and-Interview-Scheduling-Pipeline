@@ -1,0 +1,5 @@
+Name: Rahul Kumar
+Skills: Python, SQL, Git, Flask
+Experience: 3 years
+Education: B.Sc Information Technology
+Summary: Built internal tools and reporting dashboards.

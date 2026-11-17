@@ -1,0 +1,5 @@
+Name: Kavya Nair
+Skills: Python, SQL, REST, Git, Docker, AWS
+Experience: 3.5 years
+Education: Diploma in Computer Applications
+Summary: Backend developer on a logistics platform.
