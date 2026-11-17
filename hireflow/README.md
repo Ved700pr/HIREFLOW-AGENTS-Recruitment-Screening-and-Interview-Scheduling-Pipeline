@@ -153,3 +153,56 @@ Enter the role requirements; upload PDF, DOCX or TXT resumes, paste a single com
 ## Tests (`tests/test_hireflow.py`)
 
 Normal batch and slot booking; incomplete resume; more candidates than slots; bias guard catching a leaking rationale; model failure fallback; unusable model reply; append-only log; tool-level checks; roster rule (4+ agents, 2+ tools each). `tests/test_frontend.py` drives the web app with Streamlit's AppTest (sample run, pasted resumes, empty-input errors, in-memory pipeline inputs).
+
+
+#FINAL PROJECT STRUCTURE
+hireflow/                          project root (run commands here)
+├── app.py                         Streamlit web app (UI)
+├── main.py                        command-line runner
+├── requirements.txt               runtime dependencies
+├── requirements-dev.txt           test dependencies
+├── setup.sh / setup.bat           one-step venv setup
+├── .env.example                   copy to .env and add your API key
+├── .gitignore
+├── README.md
+│
+├── hireflow/                      main Python package
+│   ├── config.py                  weights, thresholds, LLM providers
+│   ├── shared_state.py            Candidate, CandidatePool, RunLog
+│   ├── llm.py                     Gemini/Groq/Ollama calls + fallback
+│   ├── runtime.py                 async helper
+│   │
+│   ├── agents/                    pipeline stages
+│   │   ├── base.py                base agent (Semantic Kernel)
+│   │   ├── coordinator.py         runs the stages in order
+│   │   ├── parser_agent.py        resume -> structured profile
+│   │   ├── matcher_agent.py       scores against the job
+│   │   ├── ranker_agent.py        ranks and writes rationale
+│   │   ├── bias_guard_agent.py    fairness check
+│   │   └── scheduler_agent.py     shortlist and interview slots
+│   │
+│   └── tools/                     plain functions the agents call
+│       ├── resume_ingestion.py    PDF / DOCX / TXT text extraction
+│       ├── profile_tools.py       contact, education, skills, projects, certs
+│       ├── parser_tools.py        name, aliases, basic fields
+│       ├── matcher_tools.py       6-part scoring with evidence
+│       ├── ranker_tools.py        sorting and rationale text
+│       ├── bias_tools.py          protected-attribute checks
+│       ├── scheduler_tools.py     slot booking
+│       ├── coordinator_tools.py   job parsing, resume loading, reports
+│       └── report_tools.py        CSV / Excel / JSON / Markdown reports
+│
+├── data/                          sample inputs
+│   ├── job_description.txt
+│   ├── availability.json
+│   └── resumes/resume_01..08.txt
+│
+├── tests/                         29 tests
+│   ├── conftest.py
+│   ├── test_hireflow.py           scoring, parsing, reports
+│   ├── test_frontend.py           Streamlit UI tests
+│   └── fixtures/abhishek_resume.txt
+│
+├── docs/                          architecture.md, architecture.png, make_diagram.py
+├── notebooks/demo.ipynb
+└── logs/run_log.txt               append-only run log (keep out of Git)
