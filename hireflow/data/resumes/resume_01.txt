@@ -1,0 +1,8 @@
+Name: Priya Sharma
+Age: 27
+Gender: Female
+Marital status: Single
+Skills: Python, SQL, REST APIs, Git, Docker
+Experience: 4 years
+Education: B.Tech Computer Science
+Summary: Backend developer who built payment and reporting services.

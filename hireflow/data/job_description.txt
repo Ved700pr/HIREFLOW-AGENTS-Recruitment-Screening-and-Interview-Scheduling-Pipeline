@@ -1,0 +1,5 @@
+Title: Backend Python Developer
+Required skills: Python, SQL, REST APIs, Git
+Preferred skills: Docker, AWS, FastAPI
+Minimum experience: 3 years
+Minimum education: Bachelor

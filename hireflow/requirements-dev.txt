@@ -1,0 +1,6 @@
+# Optional extras: tests, demo notebook, architecture diagram
+-r requirements.txt
+pytest>=8.0
+matplotlib>=3.8
+jupyter
+ipykernel
